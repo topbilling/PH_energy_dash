@@ -10,7 +10,7 @@ const EnergyDashboard = () => {
     const getEnergyData = async () => {
       try {
         // In a real flow, you'd pass your token/site_id here
-        const response = await fetch('/api/tesla/status?site_id=YOUR_SITE_ID');
+        const response = await fetch('/api/tesla/status?site_id=2715465');
         const result = await response.json();
         setData(result);
         setLoading(false);
