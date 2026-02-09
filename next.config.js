@@ -1,4 +1,4 @@
-const nextConfig = {
+module.exports = {
   async headers() {
     return [
       {
@@ -8,10 +8,12 @@ const nextConfig = {
             key: 'Content-Type',
             value: 'text/plain',
           },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
         ],
       },
     ];
   },
 };
-
-module.exports = nextConfig;
